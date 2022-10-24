@@ -2,8 +2,8 @@ function getInfo() {
     let age, userName;
     let nowYear = new Date();
 
-    userName = askData("Как ваше имя?", "Введите имя");
-    age = nowYear.getFullYear() - parseInt(askData("Год вашего рождения?", "2000"));
+    userName = prompt("Как ваше имя?", "Введите имя");
+    age = nowYear.getFullYear() - parseInt(prompt("Год вашего рождения?", "2000"));
 
     let descript = "Ваш возраст " + age + ". ";
 
@@ -34,6 +34,3 @@ function getInfo() {
     document.getElementById("MainText").innerHTML = descript;
 }
 
-function askData(message, part) {
-    return prompt(message, part);
-}
